@@ -13,7 +13,7 @@ apos.define('apostrophe-pieces-submit-widgets', {
           alert('A problem occurred setting up the contact form.');
           return;
         }
-        console.log('I populated');
+
         enableSubmit();
       });
 

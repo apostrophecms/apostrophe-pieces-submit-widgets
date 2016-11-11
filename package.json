@@ -3,18 +3,7 @@
   "version": "0.6.0",
   "description": "Submit user generated content to Apostrophe CMS sites",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://austinstarin@github.com/punkave/apostrophe-submit-pieces.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/punkave/apostrophe-submit-pieces/issues"
-  },
+  "author": "P'unk Ave",
   "homepage": "https://github.com/punkave/apostrophe-submit-pieces#readme",
   "dependencies": {
     "async": "^2.1.2",
