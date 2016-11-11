@@ -1,4 +1,4 @@
-# apostrophe-submit-pieces-widgets
+# apostrophe-pieces-submit-widgets
 
 ```javascript
 // In app.js
@@ -7,7 +7,7 @@ modules: {
   'apostrophe-events': {
   },
   'apostrophe-submit-events-widgets': {
-    extend: 'apostrophe-submit-pieces-widgets',
+    extend: 'apostrophe-pieces-submit-widgets',
     // Allow all
     // fields: [ 'title', 'body' ]
   }
