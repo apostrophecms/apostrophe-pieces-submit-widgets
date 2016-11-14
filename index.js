@@ -42,6 +42,10 @@ module.exports = {
         self.submitSchema = self.pieces.schema;
       }
     };
+    
+    self.beforeInsert = function(req, piece, callback) {
+      return callback(req, piece)
+    }
 
     self.submit = function(req, callback) {
       var piece = {};
@@ -53,9 +57,14 @@ module.exports = {
         return self.apos.schemas.convert(req, self.submitSchema, 'form', req.body, piece, callback);
       }
       function insert(callback) {
+
         // Approval = necessary!
         piece.published = false;
-        return self.pieces.insert(req, piece, { permissions: false }, callback);
+        piece.submitted = true; 
+
+        return self.beforeInsert(req, piece, function(req, piece) {
+          return self.pieces.insert(req, piece, { permissions: false }, callback);
+        });      
       }
     };
 
