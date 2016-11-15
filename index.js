@@ -9,6 +9,7 @@ module.exports = {
   // For that use case you need scene: 'user' for the
   // module powering the page, too.
   scene: 'user',
+  contextualOnly: true,
   beforeConstruct: function(self, options) {
     self.piecesModuleName = options.piecesModuleName || self.__meta.name.replace(/\-submit\-widgets$/, '');
     console.log(self.piecesModuleName);
