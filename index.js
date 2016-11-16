@@ -43,10 +43,10 @@ module.exports = {
         self.submitSchema = self.pieces.schema;
       }
     };
-    
+
     self.beforeInsert = function(req, piece, callback) {
-      return callback(req, piece)
-    }
+      return callback(null);
+    };
 
     self.submit = function(req, callback) {
       var piece = {};
@@ -63,9 +63,12 @@ module.exports = {
         piece.published = false;
         piece.submitted = true; 
 
-        return self.beforeInsert(req, piece, function(req, piece) {
+        return self.beforeInsert(req, piece, function(err) {
+          if (err) {
+            return callback(err);
+          }
           return self.pieces.insert(req, piece, { permissions: false }, callback);
-        });      
+        });    
       }
     };
 
