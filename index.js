@@ -12,7 +12,6 @@ module.exports = {
   contextualOnly: true,
   beforeConstruct: function(self, options) {
     self.piecesModuleName = options.piecesModuleName || self.__meta.name.replace(/\-submit\-widgets$/, '');
-    console.log(self.piecesModuleName);
     self.pieces = options.apos.modules[self.piecesModuleName];
     options.label = options.label || ('Submit ' + self.pieces.label);
   },
