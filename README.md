@@ -1,10 +1,10 @@
 # apostrophe-pieces-submit-widgets
 
-This module can be extended by Apostrophe's pieces to handle user submitted pieces content on the front end of your site.
+This module can be extended by `apostrophe-pieces` or a subclass to handle user submitted piece content on the front end of your site.
 
 ## Installation
 
-      $ npm install apostrophe-pieces-submit-widgets
+    $ npm install apostrophe-pieces-submit-widgets
 
 ## Example Configuration
 
