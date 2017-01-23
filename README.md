@@ -34,7 +34,7 @@ We also need to set `scene: user` in our `apostrophe-paces` subclass `events-pag
 module.exports = {
   name: 'events-page',
   // So that we can display the submission form
-  scene: 'user',
+  scene: 'user'
 }
 ```
 
