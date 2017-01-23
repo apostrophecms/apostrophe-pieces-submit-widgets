@@ -8,9 +8,9 @@ This module can be extended by `apostrophe-pieces` or a subclass to handle user 
 
 ## Example Configuration
 
-In this example we have a piece type `events` and we would like the user to be able to submit an event from a front end form for moderation in Apostrophe.
+In this example we have a piece type `events`. We would like the user to be able to submit an event from a form for moderation in Apostrophe.
 
-In `app.js` we initialize our events piece type and our widget from where we can submit a comment.
+In `app.js` we initialize our events piece type and our widget from where we want to submit a comment.
 
 ```javascript
 // In app.js
@@ -27,7 +27,7 @@ modules: {
 }
 ```
 
-We also need to set `scene: user` in our `apostrophe-paces` subclass `events-pages`, where we want to display our form. You can do this when configuring `apostrophe-pieces-pages`, for instance, or in any subclass of `apostrophe-custom-pages`.
+*Important*: We also need to set `scene: user` in our `apostrophe-paces` subclass `events-pages`, where we want to display our form. You can do this when configuring `apostrophe-pieces-pages`, for instance, or in any subclass of `apostrophe-custom-pages`.
 
 ```javascript
 // In events-pages/index.js
