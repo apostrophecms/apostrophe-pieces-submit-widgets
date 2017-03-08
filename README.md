@@ -27,7 +27,7 @@ modules: {
 }
 ```
 
-**Important**: We also need to set `scene: user` in our `apostrophe-paces` subclass `events-pages`, where we want to display our form. You can do this when configuring `apostrophe-pieces-pages`, for instance, or in any subclass of `apostrophe-custom-pages`.
+If you are AJAX loading the widget you need to set `scene: user` in our `apostrophe-pieces-pages` subclass `events-pages`. You can do this when configuring `apostrophe-pieces-pages`, for instance, or in any subclass of `apostrophe-custom-pages`.
 
 ```javascript
 // In events-pages/index.js
