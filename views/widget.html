@@ -1,7 +1,7 @@
 {% import "apostrophe-schemas:macros.html" as schemas %}
 
 <form class="apos-submit-pieces-form apos-ui" data-apos-pieces-submit-form>
-  <h4>Submit Your {{ data.label }}</h4>
+  <h4>{{ data.label }}</h4>
   {{ schemas.fields(data.schema, { tabs: false }) }}
   <button>Submit Now</button>
   {# Later gets hoisted out and becomes visible #}

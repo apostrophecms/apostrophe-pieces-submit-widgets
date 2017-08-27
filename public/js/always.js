@@ -30,7 +30,6 @@ apos.define('apostrophe-pieces-submit-widgets', {
           submitToServer
         ], function(err) {
           if (err) {
-            console.log(err);
             alert('Something was not right. Please review your submission.');
           } else {
             // Replace the form with its formerly hidden thank you message

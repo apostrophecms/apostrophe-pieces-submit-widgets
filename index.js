@@ -13,7 +13,7 @@ module.exports = {
   beforeConstruct: function(self, options) {
     self.piecesModuleName = options.piecesModuleName || self.__meta.name.replace(/\-submit\-widgets$/, '');
     self.pieces = options.apos.modules[self.piecesModuleName];
-    options.label = options.label || ('Submit ' + self.pieces.label);
+    options.label = options.label || ('Submit Your ' + self.pieces.label);
   },
   afterConstruct: function(self) {
     self.setSubmitSchema();
@@ -80,6 +80,7 @@ module.exports = {
         widget: widget,
         options: options,
         manager: self,
+        label: self.options.label,
         schema: self.submitSchema
       });
     };
