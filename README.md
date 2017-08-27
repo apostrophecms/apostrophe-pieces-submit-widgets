@@ -72,6 +72,8 @@ Once you have the module set up, you can add a submission form widget to any `ap
 
 Newly submitted pieces are initially unpublished. This makes them easy to moderate: just click on the admin bar, choose the type of piece, click "Manage" and use the "Published" filter to view unpublished pieces. Then edit them and set them to "Published: Yes" if appropriate.
 
+> This module also adds a `submitted: true` property. If you wish, you can add that to your pieces module as a boolean field and configure a filter for it so you can always distinguish between visitor submissions and your own unpublished content.
+
 ## Contact forms
 
 It might not be obvious, but this module also works great for "contact us" forms. Just create a pieces module with appropriate schema fields and use this widget to accept the submissions. You can override the `beforeInsert` method to send email, if desired.
