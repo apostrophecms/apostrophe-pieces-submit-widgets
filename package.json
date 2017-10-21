@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-pieces-submit-widgets",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Submit user generated content to Apostrophe CMS sites",
   "main": "index.js",
   "author": "P'unk Ave",
