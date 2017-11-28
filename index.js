@@ -85,8 +85,8 @@ module.exports = {
       });
     };
 
-    self.pushAsset('script', 'user', { when: 'always' });
-    self.pushAsset('stylesheet', 'user', { when: 'always' });
+    self.pushAsset('script', 'user', { when: 'user' });
+    self.pushAsset('stylesheet', 'user', { when: 'user' });
 
     self.route('post', 'submit', function(req, res) {
       return self.submit(req, function(err) {
