@@ -8,5 +8,13 @@
   "dependencies": {
     "async": "^2.1.2",
     "lodash": "^4.16.6"
-  }
+  },
+  "keywords": [
+    "apostrophecms",
+    "apostrophe",
+    "apostrophe-cms",
+    "cms",
+    "content management",
+    "content management system"
+  ]
 }
