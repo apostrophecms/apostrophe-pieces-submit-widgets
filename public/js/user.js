@@ -10,6 +10,7 @@ apos.define('apostrophe-pieces-submit-widgets', {
       var piece = _.cloneDeep(self.options.piece);
       return apos.schemas.populate($form, schema, piece, function(err) {
         if (err) {
+          apos.utils.error('For setup error: ', err);
           alert('A problem occurred setting up the contact form.');
           return;
         }
@@ -30,7 +31,7 @@ apos.define('apostrophe-pieces-submit-widgets', {
           submitToServer
         ], function(err) {
           if (err) {
-            console.error('Piece submission error: ', err);
+            apos.utils.error('Piece submission error: ', err);
             alert('Something was not right. Please review your submission.');
           } else {
             // Replace the form with its formerly hidden thank you message
