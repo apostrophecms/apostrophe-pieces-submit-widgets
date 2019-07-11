@@ -63,7 +63,7 @@ Newly submitted pieces are initially unpublished. This makes them easy to modera
 
 It might not be obvious, but this module also works great for "contact us" forms. Just create a pieces module with appropriate schema fields and use this widget to accept the submissions. You can override the `beforeInsert` method to send email, if desired.
 
-**Note:** If forms may need to change periodically or website users need to be able to create and edit form without help from a developer, [Apostrophe Forms](https://www.npmjs.com/package/apostrophe-forms) is likely a better choice.
+**Note:** If forms may need to change periodically or website users need to be able to create and edit forms without help from a developer, [Apostrophe Forms](https://www.npmjs.com/package/apostrophe-forms) is likely a better choice.
 
 ## Submitting images and files
 
