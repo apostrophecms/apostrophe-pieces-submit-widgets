@@ -63,6 +63,8 @@ Newly submitted pieces are initially unpublished. This makes them easy to modera
 
 It might not be obvious, but this module also works great for "contact us" forms. Just create a pieces module with appropriate schema fields and use this widget to accept the submissions. You can override the `beforeInsert` method to send email, if desired.
 
+**Note:** If forms may need to change periodically or website users need to be able to create and edit form without help from a developer, [Apostrophe Forms](https://www.npmjs.com/package/apostrophe-forms) is likely a better choice.
+
 ## Submitting images and files
 
 You'll notice that even if your schema contains an area with `apostrophe-images` and `apostrophe-files` widgets and the field is part of your `fields` array, the public still can't submit them for permissions reasons.
@@ -110,7 +112,7 @@ This is pretty uncommon, but the most likely example is an `apostrophe-pieces-pa
 *If the page type doing the extra AJAX loading is an "ordinary" page type like `home` or `default` with no module managing it so far, you'll need to create a module that extends `apostrophe-custom-pages` and sets its `name` option to `home` or `default` as appropriate.*
 
 ## Changelog
-
+2.0.4: README update referencing the new `apostrophe-forms` module.
 2.0.3: Fixes the package URL in package.json. Adds keywords for NPM search. Improves error logging.
 2.0.2: assets were still being pushed `always`, which resulted in errors for any page that *didn't* contain the widgets and tried to run that javascript without `scene: 'user'`. Fixed! You should *not* need to set `scene: 'user'` for every page type on your site.
 2.0.1: the documentation is complete and the examples are well-tested. Default styles are pushed to hide the "thank you" message until it replaces the form. Since `scene: 'user'` is set for the widget, we push the assets for the widget only for `scene: 'user'`, which saves overhead on pages that don't include it.
