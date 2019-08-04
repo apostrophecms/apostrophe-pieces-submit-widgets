@@ -1,6 +1,6 @@
 # apostrophe-pieces-submit-widgets
 
-This module extends the [Apostrophe CMS](http://apostrophecms.org), allowing sie visitors to submit new [pieces](http://apostrophecms.org/docs/tutorials/getting-started/reusable-content-with-pieces.html) of any type you wish. The feature is packaged as a widget, so you can easily add it to any page template.
+This module extends the [Apostrophe CMS](http://apostrophecms.org), allowing site visitors to submit new [pieces](http://apostrophecms.org/docs/tutorials/getting-started/reusable-content-with-pieces.html) of any type you wish. The feature is packaged as a widget, so you can easily add it to any page template.
 
 Here's how to set it up. Our example is based on the [apostrophe-events](https://www.npmjs.com/package/apostrophe-events) module, which extends pieces.
 
@@ -110,11 +110,3 @@ This is pretty uncommon, but the most likely example is an `apostrophe-pieces-pa
 ```
 
 *If the page type doing the extra AJAX loading is an "ordinary" page type like `home` or `default` with no module managing it so far, you'll need to create a module that extends `apostrophe-custom-pages` and sets its `name` option to `home` or `default` as appropriate.*
-
-## Changelog
-2.0.4: README update referencing the new `apostrophe-forms` module.
-2.0.3: Fixes the package URL in package.json. Adds keywords for NPM search. Improves error logging.
-2.0.2: assets were still being pushed `always`, which resulted in errors for any page that *didn't* contain the widgets and tried to run that javascript without `scene: 'user'`. Fixed! You should *not* need to set `scene: 'user'` for every page type on your site.
-2.0.1: the documentation is complete and the examples are well-tested. Default styles are pushed to hide the "thank you" message until it replaces the form. Since `scene: 'user'` is set for the widget, we push the assets for the widget only for `scene: 'user'`, which saves overhead on pages that don't include it.
-
-2.0.0: initial release.
